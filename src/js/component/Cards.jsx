@@ -1,0 +1,65 @@
+import React  from "react";
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+
+/*function MyCards1() {
+  return (
+    <div className="text-center">
+        <Card style={{ margin: '10px', padding: '10px', width: '18rem', border: '1px RGB(220, 220, 220)' }}>
+        <Card.Img variant="top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4ByS9ZYbtouvFYRybSm_6em1Dn_7vlBic-Q&s" />
+        <Card.Body style={{border: '1px solid RGB(220, 220, 220)'}}>
+            <Card.Title>Card Title</Card.Title>
+            <Card.Text>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium repellendus ducimus illum, est modi!
+            </Card.Text>
+            <Button variant="primary" className="align-items-center">Find Out More!</Button>
+        </Card.Body>
+        </Card>
+    </div>
+  );
+}
+
+export default MyCards1;*/
+
+
+
+function MyCards1({ imag, title, description}) {
+  return (
+    <div className="text-center">
+      <Card style={{ margin: '10px', padding: '10px', 
+        width: '19rem', border: '1px RGB(220, 220, 220)' }}>
+        <Card.Img variant="top" src={imag} />
+        <Card.Body style={{border: '1px solid RGB(220, 220, 220)'}}>
+        <Card.Title>{title}</Card.Title>
+        <Card.Text>{description}</Card.Text>
+        <Button variant="primary" className="align-items-center">Find Out More!</Button>
+        </Card.Body>
+      </Card>
+    </div>
+  );
+}
+function MyCardsList() {
+  const itemsCards = [
+    { imag: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4ByS9ZYbtouvFYRybSm_6em1Dn_7vlBic-Q&s',
+      title: 'Card Title', description: 'Lorem ipsum adipisicing elit. Rem laudantium, non vitae earum ipsam sint amet.' },
+    { imag: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4ByS9ZYbtouvFYRybSm_6em1Dn_7vlBic-Q&s', 
+      title: 'Card Title2', description: 'Lorem2 ipsum adipisicing elit. Rem laudantium, non vitae earum ipsam sint amet.' },
+    { imag: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4ByS9ZYbtouvFYRybSm_6em1Dn_7vlBic-Q&s', 
+      title: 'Card Title3', description: 'Lorem3 ipsum adipisicing elit. Rem laudantium, non vitae earum ipsam sint amet.' },
+    { imag: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4ByS9ZYbtouvFYRybSm_6em1Dn_7vlBic-Q&s', 
+      title: 'Card Title4', description: 'Lorem4 ipsum adipisicing elit. Rem laudantium, non vitae earum ipsam sint amet.' },
+    ];
+ return (
+  <div className="card-container">
+    {itemsCards.map((item) => (
+      <MyCards1 
+      key={item.title}
+      imag={item.imag}
+      title={item.title}
+      description={item.description}
+      />
+    ))}
+  </div>
+ );
+}
+export default MyCardsList;
