@@ -26,7 +26,7 @@ export default MyCards1;*/
 function MyCards1({ imag, title, description}) {
   return (
     <div className="text-center">
-      <Card style={{ margin: '10px', padding: '10px', 
+      <Card style={{ 
         width: '19rem', border: '1px RGB(220, 220, 220)' }}>
         <Card.Img variant="top" src={imag} />
         <Card.Body style={{border: '1px solid RGB(220, 220, 220)'}}>
@@ -50,15 +50,21 @@ function MyCardsList() {
       title: 'Card Title4', description: 'Lorem4 ipsum adipisicing elit. Rem laudantium, non vitae earum ipsam sint amet.' },
     ];
  return (
-  <div className="card-container">
+  <div className="card-container container-fluid">
+    <div className="row">
     {itemsCards.map((item) => (
+      <div className="col-md-3 col-sm-6 d-flex justify-content-center">
       <MyCards1 
       key={item.title}
       imag={item.imag}
       title={item.title}
       description={item.description}
       />
-    ))}
+      </div>
+    )
+    )
+    }
+    </div>
   </div>
  );
 }

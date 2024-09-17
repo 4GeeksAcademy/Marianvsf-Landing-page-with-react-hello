@@ -14,8 +14,10 @@ const Home = () => {
 	return (
 		<div>
       <MyNavbar/>
+	  <div className="d-flex flex-column align-items-center">
 	  <Welcome/>
       <MyCards1/>
+		</div>
 	  <Footer/>
 		</div>
 	);
