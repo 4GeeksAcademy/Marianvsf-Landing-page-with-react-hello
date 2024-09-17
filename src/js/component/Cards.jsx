@@ -25,7 +25,7 @@ export default MyCards1;*/
 
 function MyCards1({ imag, title, description}) {
   return (
-    <div className="text-center">
+    <div className="text-center mb-20px">
       <Card style={{ 
         width: '19rem', border: '1px RGB(220, 220, 220)' }}>
         <Card.Img variant="top" src={imag} />
@@ -53,7 +53,7 @@ function MyCardsList() {
   <div className="card-container container-fluid">
     <div className="row">
     {itemsCards.map((item) => (
-      <div className="col-md-3 col-sm-6 d-flex justify-content-center">
+      <div className="col-md-3 col-sm-6 d-flex justify-content-center mb-3 mt-3">
       <MyCards1 
       key={item.title}
       imag={item.imag}
