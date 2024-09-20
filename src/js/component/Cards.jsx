@@ -21,13 +21,10 @@ import Card from 'react-bootstrap/Card';
 
 export default MyCards1;*/
 
-
-
-function MyCards1({ imag, title, description}) {
+function MyCards({ imag, title, description}) {
   return (
-    <div className="text-center mb-20px">
-      <Card style={{ 
-        width: '19rem', border: '1px RGB(220, 220, 220)' }}>
+    <div className="col-md-3 col-sm-6 text-center my-3">
+      <Card style={{width: '19rem', border: '1px RGB(220, 220, 220)' }}>
         <Card.Img variant="top" src={imag} />
         <Card.Body style={{border: '1px solid RGB(220, 220, 220)'}}>
         <Card.Title>{title}</Card.Title>
@@ -38,7 +35,9 @@ function MyCards1({ imag, title, description}) {
     </div>
   );
 }
-function MyCardsList() {
+export default MyCards;
+
+/*function MyCardsList() {
   const itemsCards = [
     { imag: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4ByS9ZYbtouvFYRybSm_6em1Dn_7vlBic-Q&s',
       title: 'Card Title', description: 'Lorem ipsum adipisicing elit. Rem laudantium, non vitae earum ipsam sint amet.' },
@@ -49,17 +48,21 @@ function MyCardsList() {
     { imag: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4ByS9ZYbtouvFYRybSm_6em1Dn_7vlBic-Q&s', 
       title: 'Card Title4', description: 'Lorem4 ipsum adipisicing elit. Rem laudantium, non vitae earum ipsam sint amet.' },
     ];
+    
  return (
   <div className="card-container container-fluid">
     <div className="row">
     {itemsCards.map((item) => (
-      <div className="col-md-3 col-sm-6 d-flex justify-content-center mb-3 mt-3">
-      <MyCards1 
-      key={item.title}
-      imag={item.imag}
-      title={item.title}
-      description={item.description}
-      />
+      <div key={item.title} className="col-md-3 col-sm-6 d-flex justify-content-center mb-3 mt-3">
+      <Card style={{ 
+        width: '19rem', border: '1px RGB(220, 220, 220)' }}>
+        <Card.Img variant="top" src={item.imag} />
+        <Card.Body style={{border: '1px solid RGB(220, 220, 220)'}}>
+        <Card.Title>{item.title}</Card.Title>
+        <Card.Text>{item.description}</Card.Text>
+        <Button variant="primary" className="align-items-center">Find Out More!</Button>
+        </Card.Body>
+      </Card>
       </div>
     )
     )
@@ -69,3 +72,5 @@ function MyCardsList() {
  );
 }
 export default MyCardsList;
+*/
+
