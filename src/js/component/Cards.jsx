@@ -23,7 +23,7 @@ export default MyCards1;*/
 
 function MyCards({ imag, title, description}) {
   return (
-    <div className="col-md-3 col-sm-6 text-center my-3">
+    <div className="col-md-3 col-sm-6 text-center my-4">
       <Card style={{width: '19rem', border: '1px RGB(220, 220, 220)' }}>
         <Card.Img variant="top" src={imag} />
         <Card.Body style={{border: '1px solid RGB(220, 220, 220)'}}>
