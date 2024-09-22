@@ -6,7 +6,7 @@ function Welcome() {
   return (
     <Card style={{marginTop: '90px',
       padding: '10px', 
-      marginLeft: '20gitpx',
+      marginLeft: '20px',
       marginRight: '47px', 
       background: 'RGB(220, 220, 220)', border: '1px solid RGB(220, 220, 220)' }}>
       <Card.Body>
