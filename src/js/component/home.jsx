@@ -13,7 +13,7 @@ const Home = () => {
       <MyNavbar/>
 	  <div className="container">
             <Welcome id='welcome'/>
-					<div id="TheCards" className="d-flex justify-content-between flex-wrap">
+					<div id="TheCards" className="d-flex justify-content-center flex-wrap">
 						<MyCards 
 						imag="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4ByS9ZYbtouvFYRybSm_6em1Dn_7vlBic-Q&s"
 						title="Card Title"
