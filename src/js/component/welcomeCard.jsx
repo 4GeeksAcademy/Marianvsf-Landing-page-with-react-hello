@@ -5,7 +5,9 @@ import Card from 'react-bootstrap/Card';
 function Welcome() {
   return (
     <Card style={{marginTop: '90px',
-      padding: '10px', background: 'RGB(220, 220, 220)', border: '1px solid RGB(220, 220, 220)' }}>
+      padding: '10px', 
+      marginRight: '20px', 
+      background: 'RGB(220, 220, 220)', border: '1px solid RGB(220, 220, 220)' }}>
       <Card.Body>
         <Card.Title><h1>A Warm Welcome!</h1></Card.Title>
         <Card.Text>

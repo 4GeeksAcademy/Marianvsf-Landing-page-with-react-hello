@@ -1,5 +1,4 @@
 import React from "react";
-
 //include images into your bundle
 import MyNavbar from "./navbar";
 import { Footer } from "./footer";
@@ -13,10 +12,8 @@ const Home = () => {
 	<div>
       <MyNavbar/>
 	  <div className="container">
-      <div className="row justify-content-center">
-	  <div className="d-flex flex-wrap mx-5 align-content-center">
             <Welcome id='welcome'/>
-					<div id="TheCards" className="d-flex w-100 justify-content-center flex-wrap">
+					<div id="TheCards" className="d-flex justify-content-between flex-wrap">
 						<MyCards 
 						imag="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4ByS9ZYbtouvFYRybSm_6em1Dn_7vlBic-Q&s"
 						title="Card Title"
@@ -39,8 +36,6 @@ const Home = () => {
 						/>
 					</div>
 				</div>
-			</div>
-		</div>
 	  <Footer/>
 	</div>
 	);
